@@ -1,8 +1,8 @@
+
 export default function App() {
   return (
     <div className="bg-bg text-white min-h-screen font-sans">
 
-      {/* NAV */}
       <nav className="flex items-center justify-between px-6 py-5 max-w-7xl mx-auto">
         <span className="text-lg font-bold">Superteam Brazil 🇧🇷</span>
         <a
@@ -13,7 +13,6 @@ export default function App() {
         </a>
       </nav>
 
-      {/* HERO */}
       <section className="text-center px-6 pt-28 pb-36">
         <h1 className="text-5xl md:text-6xl font-extrabold leading-tight">
           The Home for{" "}
@@ -44,27 +43,14 @@ export default function App() {
         </div>
       </section>
 
-      {/* FEATURES */}
       <section className="max-w-7xl mx-auto px-6 pb-32 grid gap-6 md:grid-cols-3">
-        <Card
-          title="Build & Ship"
-          text="Collaborate with elite builders and ship real products."
-        />
-        <Card
-          title="Earn Grants"
-          text="Access bounties, grants, and paid opportunities."
-        />
-        <Card
-          title="Network IRL"
-          text="Exclusive events, hackathons, and founder meetups."
-        />
+        <Card title="Build & Ship" text="Collaborate with elite builders and ship real products." />
+        <Card title="Earn Grants" text="Access bounties, grants, and paid opportunities." />
+        <Card title="Network IRL" text="Exclusive events, hackathons, and founder meetups." />
       </section>
 
-      {/* CTA */}
       <section id="apply" className="bg-card py-28 text-center px-6">
-        <h2 className="text-4xl font-bold">
-          Ready to build something real?
-        </h2>
+        <h2 className="text-4xl font-bold">Ready to build something real?</h2>
         <p className="mt-4 text-white/70 max-w-xl mx-auto">
           Apply to Superteam Brazil and start contributing to the ecosystem.
         </p>
@@ -77,7 +63,6 @@ export default function App() {
         </a>
       </section>
 
-      {/* FOOTER */}
       <footer className="py-10 text-center text-white/40 text-sm">
         © {new Date().getFullYear()} Superteam Brazil
       </footer>
