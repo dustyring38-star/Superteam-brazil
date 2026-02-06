@@ -1,79 +1,108 @@
 export default function App() {
   return (
-    <div style={{ fontFamily: "Inter, system-ui, sans-serif", color: "#fff", background: "#0b0f1a" }}>
-      
+    <div style={styles.page}>
+      {/* NAV */}
+      <nav style={styles.nav}>
+        <span style={styles.logo}>Superteam Brazil 🇧🇷</span>
+        <a href="#apply" style={styles.navBtn}>Apply</a>
+      </nav>
+
       {/* HERO */}
-      <section style={{ padding: "100px 20px", textAlign: "center" }}>
-        <h1 style={{ fontSize: "3rem", marginBottom: 20 }}>
-          Superteam Brazil 🇧🇷
+      <section style={styles.hero}>
+        <h1 style={styles.heroTitle}>
+          The Home for <span style={styles.gradient}>Solana Builders</span><br />
+          in Brazil
         </h1>
-        <p style={{ fontSize: "1.25rem", maxWidth: 600, margin: "0 auto 40px" }}>
-          The home for Solana builders, founders, and creators in Brazil.
+        <p style={styles.heroText}>
+          Join founders, developers, and creators building the future of crypto.
+        </p>
+        <div style={styles.heroBtns}>
+          <a href="#apply" style={styles.primaryBtn}>Join Superteam</a>
+          <a href="#learn" style={styles.secondaryBtn}>Learn More</a>
+        </div>
+      </section>
+
+      {/* FEATURES */}
+      <section style={styles.features}>
+        <Feature
+          title="Build & Ship"
+          text="Work with top builders and ship real products on Solana."
+        />
+        <Feature
+          title="Earn Grants"
+          text="Access bounties, grants, and paid opportunities."
+        />
+        <Feature
+          title="Events & Network"
+          text="IRL meetups, hackathons, and a serious builder network."
+        />
+      </section>
+
+      {/* CTA */}
+      <section id="apply" style={styles.cta}>
+        <h2 style={styles.ctaTitle}>Ready to build?</h2>
+        <p style={styles.ctaText}>
+          Apply to Superteam Brazil and start contributing today.
         </p>
         <a
           href="https://superteam.fun"
           target="_blank"
-          style={{
-            padding: "14px 28px",
-            background: "#6d5cff",
-            borderRadius: 8,
-            color: "#fff",
-            textDecoration: "none",
-            fontWeight: 600
-          }}
-        >
-          Join the Community
-        </a>
-      </section>
-
-      {/* FEATURES */}
-      <section style={{ padding: "80px 20px", background: "#11162a" }}>
-        <div style={{ maxWidth: 900, margin: "0 auto", display: "grid", gap: 30 }}>
-          <Feature
-            title="Build on Solana"
-            text="Connect with top builders and get support shipping real products."
-          />
-          <Feature
-            title="Events & Hackathons"
-            text="Exclusive access to IRL and online events across Brazil."
-          />
-          <Feature
-            title="Earn & Grow"
-            text="Grants, bounties, and opportunities for serious contributors."
-          />
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section style={{ padding: "100px 20px", textAlign: "center" }}>
-        <h2 style={{ fontSize: "2rem", marginBottom: 20 }}>
-          Ready to build?
-        </h2>
-        <a
-          href="https://superteam.fun"
-          target="_blank"
-          style={{
-            padding: "14px 28px",
-            border: "1px solid #6d5cff",
-            borderRadius: 8,
-            color: "#6d5cff",
-            textDecoration: "none",
-            fontWeight: 600
-          }}
+          style={styles.primaryBtn}
         >
           Apply Now
         </a>
       </section>
-
     </div>
   );
 }
 
 function Feature({ title, text }) {
   return (
-    <div style={{ padding: 30, background: "#0b0f1a", borderRadius: 12 }}>
-      <h3 style={{ marginBottom: 10 }}>{title}</h3>
-      <p style={{ opacity: 0.85 }}>{text}</p>
+    <div style={styles.card}>
+      <h3>{title}</h3>
+      <p>{text}</p>
     </div>
   );
 }
+
+const styles = {
+  page: {
+    background: "#0b0f1a",
+    color: "#fff",
+    fontFamily: "Inter, system-ui, sans-serif",
+    minHeight: "100vh"
+  },
+  nav: {
+    display: "flex",
+    justifyContent: "space-between",
+    padding: "24px 40px",
+    alignItems: "center"
+  },
+  logo: {
+    fontWeight: 700,
+    fontSize: "1.1rem"
+  },
+  navBtn: {
+    color: "#fff",
+    textDecoration: "none",
+    border: "1px solid #2a2f45",
+    padding: "8px 16px",
+    borderRadius: 8
+  },
+  hero: {
+    textAlign: "center",
+    padding: "120px 20px"
+  },
+  heroTitle: {
+    fontSize: "3.5rem",
+    lineHeight: 1.1,
+    marginBottom: 20
+  },
+  gradient: {
+    background: "linear-gradient(90deg, #6d5cff, #4cc9f0)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent"
+  },
+  heroText: {
+    fontSize: "1.25rem",
+    opacity:
